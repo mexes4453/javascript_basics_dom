@@ -1,0 +1,4 @@
+00_tut - add content to html file
+01_tut - change the variable value.
+       : This changes the css styling of DOM elements (<p>) by changing their 
+       + class name within the javascript file.
