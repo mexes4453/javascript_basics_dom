@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Javascript &amp; jQuery - chapter 2 </title>
+        <link rel="stylesheet" href="../css/tut.css" />
+    </head>
+    <body>
+        <h1> Basic Javascript Instruction &amp; </h1>
+        <div id="content"> 
+            <div id="greeting" class="message">Hello!</div> 
+            <table>
+                <tr>
+                    <td>Custom sign: </td>
+                    <td id="userSign"> </td>
+                </tr>
+                <tr>
+                    <td>Total tiles: </td>
+                    <td id="tiles"></td>
+                </tr>
+                <tr>
+                    <td>Subtotal: </td>
+                    <td id="subTotal">$</td>
+                </tr>
+                <tr>
+                    <td>Shipping: </td>
+                    <td id="shipping">$</td>
+                </tr>
+                <tr>
+                    <td>Grand total: </td>
+                    <td id="grandTotal">$</td>
+                </tr>
+            </table>
+            <a href="#" class="action"> Pay Now</a>
+        </div>
+
+        <!-- It is recommended to always but the script just the closing tag
+             of the body element.
+            This ensures that the page contects looads first before the loading
+            the script items wihich may take some some extra time.
+        -->
+        <script src="../js/order.js"></script>
+    </body>
+</html>
