@@ -1,0 +1,11 @@
+#idOrderItem{
+    color: blue;
+}
+
+.instock {
+    background-color: green;
+}
+
+.outstock {
+    background-color: red;
+}
