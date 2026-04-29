@@ -45,3 +45,7 @@ div{
     color: #ffffff; /* white */
     border: 2px solid black;
 }
+
+em{
+    visibility: hidden;
+}
