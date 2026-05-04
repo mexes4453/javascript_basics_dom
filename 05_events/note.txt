@@ -1,0 +1,66 @@
+events pg.246[258]
+events triggers codes (script, function) to be executed.
+
+Event types
+-----------
+event - ui_events -> load, unload, error, resize, scroll
+event - keyboard -> keydown, keyup, keypress
+event - mouse -> click, dblclick, mousedown, mouseup, mousemove, mouseover, mouseout
+event - focus -> focus/focusin; blur/focusout 
+event - forms -> input, change, submit, reset, cut, copy, paste, select
+event - mutation -> DOMSubtreeModified, DOMNodeInserted, DOMNodeRemoved, 
+                    ..., DOMNodeInsertedIntoDocument, DOMNodeRemovedFromDocument.
+
+note that events are registered to their handler with the keyword on{event}. 
++ This means the word "on" prefixes the event name.
++ Examples -> onClick, onSubmit, onReset, onKeydown... etc
+
+
+Event handling techniques
+-------------------------
+html event handler
++ less recommended as javascript code are written within html which should be separated.
++ syntax => <el onevent = 'functionName()'>text</el> // in html file.
+
+traditional dom event handler
++ recommend but limited.
++ it does not allow user to pass argument to the event handler
++ allows only one function at a time.
++ syntax => element.onevent = functionName; // in javascript file. parenthesis not required. 
+
+dom level2 event listener
++ highly recommended.
++ they support element to have more than one function
++ They support functions with multiple parameters.
++ The function can be anonymous type.
++ syntax => element.addEventListener('event', functionName, [, Boolean]); // in javascript file.
++ ...                                 |       |                  |
++ ...                                 |       |                  + event flow, also called capture, usually set to false.
++ ...                                 |       + the name of the function to invoke, when event occurs.
++ ...                                 + event name binded to the element.
++ ...example=> el.addEventListener('blur', checkUserName, false);
++ Registered events can be removed with the method called removeEventListener(...same arguments as addEventListener)
+
+
+Event object
+------------
+The event object is created upon binding and can it stores the following information about the event.
++ target : the element upon which the event occurred upon
++ key : which key was pressed for keyPressed event
++ viewport: which part of the viewport the user clicked for click event.
+
+It is passed automatically to the event handler function with the parameter name 'e'
+it has the following properties and method.
+property -> target : The element upon which the event occurred upon (<a>, <li>)
+property -> type : The event type (keyPressed, click, submit)
+property -> cancelable : allows to cancel the default behavior of an element.
+---
+method -> preventDefault() : cancel default behaviour of the event
+method -> stopPropagation() : stops the event from bubbling or capturing any further
+
+
+Event delegation
+----------------
+this involves assigning only one event listener of elements with a lot of children that may have events.
+It improves performance, as each child do not to have an eventlistener but the parent element will handle it.
++ code is not impacted it the element and its children structure is modified.

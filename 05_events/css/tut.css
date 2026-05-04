@@ -1,0 +1,60 @@
+#idOrderItem{
+    color: blue;
+}
+
+.instock {
+    background-color: green;
+}
+
+.outstock {
+    background-color: red;
+}
+
+#idHotelName{
+    color: grey;
+    font-stretch: 60%;
+}
+
+#idRooms{
+    color: green;
+    font-stretch: 60%;
+}
+
+div{
+    min-height: 100px;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    color: blue;
+    margin: 1px 1px 1px 1px;
+    background-image: linear-gradient(to left, rgb(30 45 80 / 90%), transparent);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.hot
+{
+    background-color: #ff0000;
+    color: #ffffff; /* white */
+}
+
+.cool
+{
+    background-color: #0000ff;
+    color: #ffffff; /* white */
+    border: 2px solid black;
+}
+
+em{
+    visibility: hidden;
+}
+
+#shoppingList
+{
+    background-color: #327516;
+    margin: 1px 1px 1px 1px;
+    padding: 20px;
+}
+
+
